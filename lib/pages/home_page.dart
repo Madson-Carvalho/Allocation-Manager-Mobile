@@ -1,3 +1,4 @@
+import 'package:allocation_manager_mobile/widgets/base_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,18 +11,6 @@ class HomePage extends StatefulWidget {
 class _MyHomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const SafeArea(child: Drawer()),
-      appBar: AppBar(
-        title: const Text("Allocation Manager"),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
-      ),
-    );
+    return const BasePage(body: Column());
   }
 }
