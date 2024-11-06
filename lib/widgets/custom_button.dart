@@ -15,12 +15,12 @@ class CustomButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll(AppColors.primaryColor),
-          foregroundColor: MaterialStatePropertyAll(AppColors.white),
-          shape: MaterialStatePropertyAll(
+          backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
+          foregroundColor: WidgetStatePropertyAll(AppColors.white),
+          shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
-                  3), // Ajuste o valor para o raio desejado
+                  3),
             ),
           ),
         ),

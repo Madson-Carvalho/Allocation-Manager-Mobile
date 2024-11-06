@@ -11,14 +11,14 @@ class RegisterEmployeerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BasePage(
-        body: Expanded(
+        body: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
                   'Cadastro de Colaborador',
-                  style: TextStyle(fontSize: 24, color: AppColors.primaryColor),
+                  style: TextStyle(fontSize: 30, color: AppColors.primaryColor),
             ),
           ),
           CustomTextFormField(labelText: "Nome",),
@@ -32,7 +32,9 @@ class RegisterEmployeerPage extends StatelessWidget {
           CustomTextFormField(
               labelText:
                   "Especialização"),
-          CustomButton(titleButton: 'Cadastrar', onPressed: () {})
+          CustomButton(titleButton: 'Cadastrar', onPressed: () {
+            print("oi");
+          })
         ],
       ),
     ));
