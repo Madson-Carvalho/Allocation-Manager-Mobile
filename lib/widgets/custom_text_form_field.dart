@@ -39,7 +39,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         decoration: InputDecoration(
           // fillColor: Colors.white,
           // filled: true,
-          labelStyle: const TextStyle(color: AppColors.white),
+          labelStyle: const TextStyle(color: AppColors.primaryColorSofty),
           suffixIcon: widget.suffixIcon,
           labelText: widget.labelText,
           focusedBorder: defaultBorder,

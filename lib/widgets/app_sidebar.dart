@@ -15,21 +15,22 @@ class _AppSidebarState extends State<AppSidebar> {
     return SafeArea(
       child: Drawer(
         child: Container(
-          child: ListView(padding: EdgeInsets.zero, children: const [
+          child: ListView(padding: EdgeInsets.zero, children: [
             ListTile(
-              leading: Icon(Icons.person, color: AppColors.primaryColor),
-              title: Text(
-                'Colaboradores',
+              leading: const Icon(Icons.person, color: AppColors.primaryColor),
+              title: const Text('Colaboradores',
                 style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
               ),
+              onTap: () {},
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
-              title: Text(
+              leading: const Icon(Icons.note_alt, color: AppColors.primaryColor),
+              title: const Text(
                 'Projetos',
                 style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
               ),
+              onTap: () {},
             ),
           ]),
         ),

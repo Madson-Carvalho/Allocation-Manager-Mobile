@@ -12,26 +12,26 @@ class RegisterEmployeerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BasePage(
         body: Expanded(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              'Cadastro de Colaborador',
-              style: TextStyle(fontSize: 24, color: AppColors.primaryColor),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  'Cadastro de Colaborador',
+                  style: TextStyle(fontSize: 24, color: AppColors.primaryColor),
             ),
           ),
-          CustomTextFormField(labelText: "Nome"),
+          CustomTextFormField(labelText: "Nome",),
           CustomTextFormField(labelText: "E-mail"),
           CustomTextFormField(labelText: "Horas de trabalho"),
           CustomTextFormField(labelText: "Cargo"),
           CustomTextFormField(labelText: "Salario"),
           CustomTextFormField(
               labelText:
-                  "Formação (Para colaboradores com múltiplas formação, separe-as por vírgulas.)"),
+                  "Formação"),
           CustomTextFormField(
               labelText:
-                  "Especialização (Para colaboradores com múltiplas especializações, separe-as por vírgulas.)"),
+                  "Especialização"),
           CustomButton(titleButton: 'Cadastrar', onPressed: () {})
         ],
       ),
