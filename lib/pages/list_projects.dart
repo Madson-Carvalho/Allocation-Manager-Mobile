@@ -28,16 +28,16 @@ class _ListProjectsState extends State<ListProjects> {
               itemCount: 4,
               itemBuilder: (context, index) {
                 return ListTile(
-                  iconColor: const Color(0xFF6DB6FE),
+                  iconColor: AppColors.ligthBlue,
                   leading: const Icon(Icons.note_alt),
                   title: const Text('Nome projeto'),
                   subtitle: Text(
-                    DateFormat('dd/MM/yyyy hh:mm:ss').format(DateTime.now()),
-                    style: const TextStyle(color: Color(0xFF0068FF)),
+                    'Data inicial ${DateFormat('dd/MM/yyyy hh:mm:ss').format(DateTime.now())} \nData final ${DateFormat('dd/MM/yyyy hh:mm:ss').format(DateTime.now())}',
+                    style: const TextStyle(color: AppColors.seanBlue),
                   ),
                   trailing: const Text(
                     '- R\$ 60000',
-                    style: TextStyle(color: Color(0xFF0068FF)),
+                    style: TextStyle(color: AppColors.seanBlue),
                   ),
                 );
               },
