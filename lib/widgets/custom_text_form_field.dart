@@ -37,9 +37,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         obscureText: widget.obscureText ?? false,
         keyboardType: widget.keyboardType,
         decoration: InputDecoration(
-          // fillColor: Colors.white,
-          // filled: true,
-          labelStyle: const TextStyle(color: AppColors.white),
+          labelStyle: const TextStyle(color: AppColors.primaryColor),
           suffixIcon: widget.suffixIcon,
           labelText: widget.labelText,
           focusedBorder: defaultBorder,
