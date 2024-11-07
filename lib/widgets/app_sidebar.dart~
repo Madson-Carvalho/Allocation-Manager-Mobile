@@ -18,7 +18,7 @@ class _AppSidebarState extends State<AppSidebar> {
           child: ListView(padding: const EdgeInsets.only(top: 20), children: [
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, '/register-employeer');
+                Navigator.pushReplacementNamed(context, '/');
               },
               child: const ListTile(
                 leading: Icon(Icons.person, color: AppColors.primaryColor),

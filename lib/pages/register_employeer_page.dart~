@@ -25,13 +25,13 @@ class RegisterEmployeerPage extends StatelessWidget {
           CustomTextFormField(labelText: "E-mail"),
           CustomTextFormField(labelText: "Horas de trabalho"),
           CustomTextFormField(labelText: "Cargo"),
-          CustomTextFormField(labelText: "Salario"),
+          CustomTextFormField(labelText: "Salário/h"),
           CustomTextFormField(
               labelText:
-                  "Formação (Para colaboradores com múltiplas formação, separe-as por vírgulas.)"),
+                  "Formação"),
           CustomTextFormField(
               labelText:
-                  "Especialização (Para colaboradores com múltiplas especializações, separe-as por vírgulas.)"),
+                  "Especializações"),
           CustomButton(titleButton: 'Cadastrar', onPressed: () {})
         ],
       ),
