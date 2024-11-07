@@ -42,9 +42,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           labelText: widget.labelText,
           focusedBorder: defaultBorder,
           focusedErrorBorder: defaultBorder.copyWith(
-              borderSide: const BorderSide(color: Colors.red)),
+              borderSide: const BorderSide(color: AppColors.red)),
           errorBorder: defaultBorder.copyWith(
-              borderSide: const BorderSide(color: Colors.red)),
+              borderSide: const BorderSide(color: AppColors.red)),
           border: defaultBorder,
           disabledBorder: defaultBorder,
           enabledBorder: defaultBorder,
