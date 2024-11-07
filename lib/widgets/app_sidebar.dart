@@ -18,7 +18,7 @@ class _AppSidebarState extends State<AppSidebar> {
           child: ListView(padding: const EdgeInsets.only(top: 20), children: [
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, '/register-employeer');
+                Navigator.pushReplacementNamed(context, '/');
               },
               child: const ListTile(
                 leading: Icon(Icons.person, color: AppColors.primaryColor),
@@ -38,6 +38,19 @@ class _AppSidebarState extends State<AppSidebar> {
                 leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
                 title: Text(
                   'Projetos',
+                  style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+                ),
+              ),
+            ),
+            const Divider(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/register-employee');
+              },
+              child: const ListTile(
+                leading: Icon(Icons.perm_contact_cal, color: AppColors.primaryColor),
+                title: Text(
+                  'Registrar Colaborador',
                   style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
                 ),
               ),
