@@ -32,7 +32,7 @@ class _AppSidebarState extends State<AppSidebar> {
             const Divider(),
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, '/');
+                Navigator.pushReplacementNamed(context, '/projects');
               },
               child: const ListTile(
                 leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
