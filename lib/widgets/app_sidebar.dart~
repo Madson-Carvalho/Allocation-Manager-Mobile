@@ -48,7 +48,7 @@ class _AppSidebarState extends State<AppSidebar> {
                 Navigator.pushReplacementNamed(context, '/register-employee');
               },
               child: const ListTile(
-                leading: Icon(Icons.perm_contact_cal, color: AppColors.primaryColor),
+                leading: Icon(Icons.person, color: AppColors.primaryColor),
                 title: Text(
                   'Registrar Colaborador',
                   style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
