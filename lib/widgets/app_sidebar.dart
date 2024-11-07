@@ -15,22 +15,45 @@ class _AppSidebarState extends State<AppSidebar> {
     return SafeArea(
       child: Drawer(
         child: Container(
-          child: ListView(padding: EdgeInsets.zero, children: [
-            ListTile(
-              leading: const Icon(Icons.person, color: AppColors.primaryColor),
-              title: const Text('Colaboradores',
-                style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+          child: ListView(padding: const EdgeInsets.only(top: 20), children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/');
+              },
+              child: const ListTile(
+                leading: Icon(Icons.person, color: AppColors.primaryColor),
+                title: Text(
+                  'Colaboradores',
+                  style:
+                      TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+                ),
               ),
-              onTap: () {},
             ),
             const Divider(),
-            ListTile(
-              leading: const Icon(Icons.note_alt, color: AppColors.primaryColor),
-              title: const Text(
-                'Projetos',
-                style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/');
+              },
+              child: const ListTile(
+                leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
+                title: Text(
+                  'Projetos',
+                  style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+                ),
               ),
-              onTap: () {},
+            ),
+            const Divider(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/register-project');
+              },
+              child: const ListTile(
+                leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
+                title: Text(
+                  'Registrar Projetos',
+                  style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+                ),
+              ),
             ),
           ]),
         ),

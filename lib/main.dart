@@ -1,6 +1,7 @@
 import 'package:allocation_manager_mobile/commons/app_colors.dart';
 import 'package:allocation_manager_mobile/pages/home_page.dart';
 import 'package:allocation_manager_mobile/pages/register_employeer_page.dart';
+import 'package:allocation_manager_mobile/pages/register_project.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true,
       ),
-      initialRoute: 'register/employeer',
+      initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
-        'register/employeer': (context) => RegisterEmployeerPage(),
+        '/': (context) => const HomePage(),
+        '/register-project': (context) => const RegisterProject(),
+        'register/employeer': (context) => const RegisterEmployeerPage(),
       },
     );
   }
