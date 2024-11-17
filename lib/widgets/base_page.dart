@@ -18,9 +18,17 @@ class _BasePageState extends State<BasePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text(
-          'Allocation Manager',
-          style: TextStyle(color: AppColors.white),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(
+              'assets/images/logo_sem_texto-removebg-preview.png',
+            height: 40,),
+            const Text(
+              'Allocation Manager',
+              style: TextStyle(color: AppColors.white),
+            ),
+          ],
         ),
         iconTheme: const IconThemeData(color: AppColors.white),
         backgroundColor: AppColors.primaryColor,
