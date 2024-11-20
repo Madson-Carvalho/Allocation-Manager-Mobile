@@ -45,12 +45,12 @@ class _AppSidebarState extends State<AppSidebar> {
             const Divider(),
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, '/register-employee');
+                Navigator.pushReplacementNamed(context, '/employee');
               },
               child: const ListTile(
-                leading: Icon(Icons.perm_contact_cal, color: AppColors.primaryColor),
+                leading: Icon(Icons.person, color: AppColors.primaryColor),
                 title: Text(
-                  'Registrar Colaborador',
+                  'Colaboradores',
                   style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
                 ),
               ),
@@ -60,13 +60,6 @@ class _AppSidebarState extends State<AppSidebar> {
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/register-project');
               },
-              child: const ListTile(
-                leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
-                title: Text(
-                  'Registrar Projetos',
-                  style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
-                ),
-              ),
             ),
           ]),
         ),
