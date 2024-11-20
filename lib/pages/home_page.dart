@@ -71,7 +71,7 @@ class _MyHomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Expanded(
               child: Container(
                 padding: const EdgeInsets.all(8),
@@ -102,11 +102,11 @@ class _MyHomePageState extends State<HomePage> {
                             ),
                             subtitle: const Text(
                               'Tempo Disponivel',
-                              style: TextStyle(color: AppColors.white),
+                              style: const TextStyle(color: AppColors.white),
                             ),
                             trailing: const Text(
                               '3h',
-                              style: TextStyle(color: AppColors.white, fontSize: 16),
+                              style: const TextStyle(color: AppColors.white, fontSize: 16),
                             ),
                           );
                         },

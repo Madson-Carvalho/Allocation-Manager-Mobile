@@ -1,8 +1,7 @@
 import 'package:allocation_manager_mobile/commons/app_colors.dart';
 import 'package:allocation_manager_mobile/pages/home_page.dart';
 import 'package:allocation_manager_mobile/pages/list_projects.dart';
-import 'package:allocation_manager_mobile/pages/register_employee_page.dart';
-import 'package:allocation_manager_mobile/pages/register_project.dart';
+import 'package:allocation_manager_mobile/pages/list_employee_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,9 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/register-project': (context) => const RegisterProject(),
         '/projects': (context) => const ListProjects(),
-        '/register-employee': (context) => const RegisterEmployeerPage(),
+        '/employee': (context) => const ListEmployeePage(),
       },
     );
   }

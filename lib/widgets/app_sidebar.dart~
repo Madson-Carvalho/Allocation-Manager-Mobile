@@ -60,6 +60,13 @@ class _AppSidebarState extends State<AppSidebar> {
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/register-project');
               },
+              child: const ListTile(
+                leading: Icon(Icons.note_alt, color: AppColors.primaryColor),
+                title: Text(
+                  'Registrar Projetos',
+                  style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
+                ),
+              ),
             ),
           ]),
         ),

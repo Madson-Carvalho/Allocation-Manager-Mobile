@@ -48,7 +48,7 @@ class _MyHomePageState extends State<HomePage> {
                         itemCount: 3,
                         itemBuilder: (context, index) {
                           return ListTile(
-                            leading: const Icon(Icons.note_alt, color: AppColors.white),
+                            leading: const Icon(Icons.note_alt, color: AppColors.white, size : 35,),
                             title: Text(
                               'Projeto ${index + 1}',
                               style: const TextStyle(color: AppColors.white),
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Expanded(
               child: Container(
                 padding: const EdgeInsets.all(8),
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<HomePage> {
                       alignment: Alignment.topCenter,
                       child: Text(
                         'Colaboradores Disponiveis',
-                        style: TextStyle(color: AppColors.white, fontSize: 20),
+                        style: TextStyle(color: AppColors.white, fontSize: 20,),
                       ),
                     ),
                     const SizedBox(height: 8),
