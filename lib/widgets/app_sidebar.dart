@@ -50,7 +50,7 @@ class _AppSidebarState extends State<AppSidebar> {
               child: const ListTile(
                 leading: Icon(Icons.person, color: AppColors.primaryColor),
                 title: Text(
-                  'Colaboradore',
+                  'Colaboradores',
                   style: TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
                 ),
               ),
