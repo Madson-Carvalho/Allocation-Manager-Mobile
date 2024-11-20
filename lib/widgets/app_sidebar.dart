@@ -21,9 +21,9 @@ class _AppSidebarState extends State<AppSidebar> {
                 Navigator.pushReplacementNamed(context, '/');
               },
               child: const ListTile(
-                leading: Icon(Icons.person, color: AppColors.primaryColor),
+                leading: Icon(Icons.home_filled, color: AppColors.primaryColor),
                 title: Text(
-                  'Colaboradores',
+                  'Página Inicial',
                   style:
                       TextStyle(fontSize: 20.0, color: AppColors.primaryColor),
                 ),
