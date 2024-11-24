@@ -4,10 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../commons/app_colors.dart';
+import '../model/employee_model.dart';
+import '../services/api_service.dart';
 import '../widgets/custom_button.dart';
 
-class ListEmployeePage extends StatelessWidget {
+class ListEmployeePage extends StatefulWidget {
   const ListEmployeePage({super.key});
+
+  @override
+  State<ListEmployeePage> createState() => _ListEmployeePageState();
+}
+
+class _ListEmployeePageState extends State<ListEmployeePage> {
+  late Future<List<Employee>> _futureEmployees;
+
+  @override
+  void initState() {
+    super.initState();
+    _futureEmployees = ApiService().fetchEmployees();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,35 +37,47 @@ class ListEmployeePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: ListView.separated(
-              itemCount: 20,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  iconColor: AppColors.primaryColor,
-                  leading: const Icon(Icons.person),
-                  title: const Text('Nome Colaborador',
-                    style: TextStyle(color: AppColors.primaryColor),
-                  ),
-                  subtitle: RichText(
-                    text: TextSpan(
-                      text: 'Nome do projeto\n',
-                      style: const TextStyle(color: AppColors.primaryColorSofty, fontSize:  14),
-                      children: [
-                        TextSpan(
-                          text: 'Data inicial: ${DateFormat('dd/MM/yyyy hh:mm:ss').format(DateTime.now())}\n',
-                          style: const TextStyle(fontSize: 12),
-                        ),
-                        TextSpan(
-                          text: 'Data final: ${DateFormat('dd/MM/yyyy hh:mm:ss').format(DateTime.now())}',
-                          style: const TextStyle(fontSize: 12),
-                        ),
-                      ],
+            child: FutureBuilder<List<Employee>>(
+              future: _futureEmployees,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(
+                    child: Text(
+                      'Erro ao carregar os dados: ${snapshot.error}',
+                      style: const TextStyle(color: Colors.red),
                     ),
-                  ),
-                );
+                  );
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(
+                    child: Text(
+                      'Nenhum colaborador encontrado.',
+                      style: TextStyle(color: AppColors.primaryColor),
+                    ),
+                  );
+                } else {
+                  final employees = snapshot.data!;
+                  return ListView.separated(
+                    itemCount: employees.length,
+                    itemBuilder: (context, index) {
+                      final employee = employees[index];
+                      return ListTile(
+                        iconColor: AppColors.ligthBlue,
+                        leading: const Icon(Icons.note_alt),
+                        title: Text(employee.name),
+                        subtitle: Text(
+                          'Cargo: ${(employee.specializations)}\n'
+                              'Carga horária: ${(employee.workInSeconds)}',
+                          style: const TextStyle(color: AppColors.seanBlue),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (context, index) =>
+                    const Divider(color: AppColors.primaryColor),
+                  );
+                }
               },
-              separatorBuilder: (context, index) =>
-                  const Divider(color: AppColors.primaryColor),
             ),
           ),
         ],
