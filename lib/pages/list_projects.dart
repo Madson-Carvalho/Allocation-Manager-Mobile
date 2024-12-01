@@ -70,7 +70,7 @@ class _ListProjectsState extends State<ListProjects> {
                           style: const TextStyle(color: AppColors.seanBlue),
                         ),
                         trailing: Text(
-                          '- R\$ ${project.totalProjectValue.toStringAsFixed(2)}',
+                          'R\$ ${project.totalProjectValue.toStringAsFixed(2)}',
                           style: const TextStyle(color: AppColors.seanBlue),
                         ),
                       );

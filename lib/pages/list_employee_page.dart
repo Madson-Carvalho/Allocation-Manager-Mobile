@@ -64,11 +64,12 @@ class _ListEmployeePageState extends State<ListEmployeePage> {
                       final employee = employees[index];
                       return ListTile(
                         iconColor: AppColors.ligthBlue,
-                        leading: const Icon(Icons.note_alt),
+                        leading: CircleAvatar(child: const Icon(Icons.person, size: 35,)),
                         title: Text(employee.name),
                         subtitle: Text(
-                          'Cargo: ${(employee.specializations)}\n'
-                              'Carga horária: ${(employee.workInSeconds)}',
+                          'Cargo: ${(employee.jobRole)}\n'
+                              'Carga horária: ${(employee.workInSeconds)}\n'
+                              'Horas disponiveis: ${(employee.workInSeconds) - (employee.allocatedHours)}',
                           style: const TextStyle(color: AppColors.seanBlue),
                         ),
                       );
