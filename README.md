@@ -26,21 +26,20 @@ O projeto inclui a imagem do logo localizada em:
 `assets/images/logo_sem_texto-removebg-preview.png`.
 
 ## Como Rodar o Projeto
-Para rodar o projeto em seu ambiente local, siga as etapas abaixo:
+Para rodar o projeto em seu ambiente local, siga as etapas abaixo:<br>
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Madson-Carvalho/Allocation-Manager-Mobile
+1. Clone o repositório:<br>
+   git clone https://github.com/Madson-Carvalho/Allocation-Manager-Mobile<br>
 
 
-2. Navegue até a pasta do projeto
-cd allocation_manager_mobile
+2. Navegue até a pasta do projeto<br>
+cd allocation_manager_mobile<br>
 
-3. Instale as dependências
-flutter pub get
+3. Instale as dependências<br>
+flutter pub get<br>
 
-4. Execute o aplicativo
-flutter run
+4. Execute o aplicativo<br>
+flutter run<br>
 
 **Observação**  
 Certifique-se de que o Flutter esteja instalado corretamente em sua máquina e de ter um dispositivo Android ou iOS conectado ou um emulador configurado.
